@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ThreePizza</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-all">
+            <div class="header-nav">
+                <span><a href="Index.html">Menu</a></span>
+                <span><a href="#Pizza">Пицца</a></span>
+                <span><a href="#Combo">Комбо</a></span>
+                <span><a href="#Drinks">Напитки</a></span>
+            </div>
+            <div class="header-user">
+                <span><p class="bold">+7(800)353-55-55</p></span>
+                <span class="user"><a href="Profile.html"><img src="img/Profile_Pic.png" alt=""></a></span>
+                <span class="header-user-order"><a href="Busket.html">Order</a></span>
+            </div>
+        </nav>
+    </header>
+    <div class="containers">
+        <div class="container">
+            <div class="container-name"><h2>Ваш профиль</h2></div>
+            <div class="profile">
+                <div class="profile-left">
+                    <img src="img/ProfilePicBig.png" alt="">
+                    <button>Edit</button>
+                </div>
+                <div class="profile-right">
+                    <div class="profile-right-name">
+                        <input type="text" placeholder="Имя" name="name" id="">
+                        <input type="text" placeholder="Фамилия" name="lastName" id="">
+                    </div>
+                    <input type="text" placeholder="Номер телефона" name="phoneNumber" id="">
+                    <input type="text" placeholder="Адрес" name="adress" id="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="container-name"><h2>БАЛЛЫ</h2></div>
+                <div class="balls-container">
+                    <div class="balls">1</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="container-name"><h2>Оплата</h2></div>
+                <div class="payment-new">
+                    <p>
+                        Наш виртуальный ресторан принимает только безналичную оплату.
+                         Пожалуйста укажите данные вашей карты ниже!
+                        </p>
+                        <div class="card card-new">
+                            <div class="card-left card-left-new">
+                                <input type="text" placeholder="Номер карты" name="cardnumber" required>
+                                <input type="text" placeholder="Имя держателя" name="cardname" required>
+                            </div>
+                           <div class="card-right card-right-new">
+                                <input type="text" placeholder="ММ/ГГ" name="expdate" required>
+                                <input type="text" placeholder="CVV код" name="cvvcode" required>
+                           </div>
+                        </div>
+                </div>
+                <div class="save-button"><button>Сохранить</button></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"><div>Footer</div></footer>
+</body>
+</html>

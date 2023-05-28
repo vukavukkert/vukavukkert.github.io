@@ -1,0 +1,438 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+:focus,:active{
+    outline: none;
+}
+a:focus,a:active{
+    outline: none;
+}
+nav,footer,header,aside{
+    display: block
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input, button, textarea{
+    font-family: inherit;
+}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1, h2, h3, h4, h4, h5, h6{font-size:inherit; font-weight: 400;}
+body{
+    font-family: Montserrat, serif;
+    background: linear-gradient(180deg, #F6F2ED 0%, #f1f5eb 100%);
+}
+.header{
+    background-color: orange;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.header-all{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.header-nav{
+    display: flex;
+    justify-content: start;
+}
+.header-user{
+    display: flex;
+    justify-content: end;
+}
+.header-nav span{
+    background-color: #F6F2ED;
+    padding: 10px;
+    margin: 0px 20px;
+    border-radius: 25px;
+}
+.header-user span{
+    margin: 0px 20px;
+    padding: 10px;
+}
+.header-user-order{
+    background-color: #F6F2ED;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.user img{  
+    height: 40px;
+    margin: -10px;
+}
+
+.footer{
+    background-color: orange;
+    padding: 20px;
+}
+.center-text{
+    text-align: center;
+    font-size: 66px;
+    font-weight: 400;
+    padding: 50px 0px;
+}
+.border{
+    border: 1px solid black;
+}
+.content{
+    margin: 60px 20px 20px 20px;
+}
+.banners{
+    text-align: center;
+}
+.banners-pizza{
+    display: inline-flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+.banner-pizza{
+    max-width: 350px;
+    margin: 20px;
+    background: linear-gradient(0deg, #FFFFFF 37%, orange 77%);
+    border-radius: 50px;
+    position: relative;
+}
+.banner-pizza img{
+    width: 300px;
+    transform: translate(0px, -30px );   
+}
+.banner-pizza button{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 25px;
+    margin: 20px;
+}
+.banner-pizza p {
+    padding: 10px;
+    text-align: center;
+}
+.bold{
+    font-size: inherit;
+    font-weight: 700;
+}
+.banners-combos{
+    display: inline-flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+.banner-combos{
+    max-width: 340px;
+    min-width: 340px;
+    margin: 20px;
+    background: linear-gradient(0deg, #FFFFFF 37%, yellow 77%);
+    border-radius: 50px;
+    position: relative;
+}
+.banner-combos img{
+    height: 300px;
+    transform: translate(0px, -30px );   
+}
+.banner-combos button{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 25px;
+    margin: 20px;
+}
+.banner-combos p {
+    padding: 10px;
+    text-align: center;
+}
+.banners-drinks{
+    display: inline-flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+.banner-drinks{
+    max-width: 340px;
+    min-width: 338px;
+    margin: 20px;
+    background: linear-gradient(0deg, #FFFFFF 37%, rgba(214, 248, 78, 1) 77%);
+    border-radius: 50px;
+    position: relative;
+}
+.banner-drinks img{
+    height: 300px;
+    transform: translate(0px, -30px );   
+}
+.banner-drinks button{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 25px;
+    margin: 20px;
+}
+.banner-drinks p {
+    padding: 10px;
+    text-align: center;
+}
+
+/*-------*/
+.containers{
+   margin: 60px 60px 60px ;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.container{
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 40px 0px ;
+    padding: 40px;
+    min-width: 900px;
+}
+.container-name{
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 0px 30px 0px ;
+}
+.full-order{
+    border:  rgb(212, 212, 212) dotted;
+    border-radius: 45px;
+    padding: 0px 20px;
+    font-size: 20px;
+}
+.order{
+    padding: 10px 0px 10px 0px ;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    border-bottom: rgb(212, 212, 212) dotted;
+}
+.order:last-child{
+    border: none;
+}
+.order img{
+    width: 200px;
+}
+.final-pos{
+    display: flex;
+    justify-content: end;
+}
+.final{
+    display: inline-flex;
+    padding: 20px 10px;
+    transform: translate(0px, -30px);
+    border:  rgb(212, 212, 212) dotted;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 20px;
+}
+.money{
+    color:orange;
+    font-weight: 1000;
+}
+.line{
+    border-bottom:  orange solid;
+    min-width: 150px;
+}
+/*--------*/
+.card{
+    background: #D6F84E;
+    border-radius: 25px;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.card input{
+    display: inline-flex;
+    background: #BADB37;
+    border-radius: 15px;
+    height: 40px;
+    margin: 10px;
+    padding: 0px 10px;
+    width: 100px;
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+}
+.card-left input{
+    width: 250px;
+}
+.card-right{
+    display: flex;
+    flex-direction: column;
+}
+.payment{
+    display: flex;
+    justify-content: space-between;
+}
+.payment-left{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.payment-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.changecard{
+    display: flex;
+    justify-content: center;
+}
+.changecard button{
+    margin: 20px 0 0 0;
+    padding: 5px 20;
+    background-color: #F8E74E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 20px;
+}
+.addcard button{
+    background-color: transparent;
+}
+.addcard button img{
+    height: 80px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.buybutton button{
+    padding: 15px 30px;
+    background-color: #D6F84E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 20px;
+}
+.buybutton{
+    align-self: center;
+}
+/*-------------*/
+.adress-container{
+display: flex;
+justify-content: center;
+margin: 40px 0 0 0;
+}
+.adress-container input{
+    background-color:#F0F0F0;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+}
+.adress-container p {
+    margin: 0px 0 0 10;
+    padding: 0px 0 0 10;
+    font-size: 16px;
+}
+.map{
+    display: flex;
+    justify-content: center;
+}
+.map iframe{
+    border-radius: 25px;
+}
+/*----------------*/
+.profile{
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profile-left img{
+    width: 200px;
+    margin: 10px;
+}
+.profile-left button{
+    width: 100px;
+    background-color: #FFDC83;
+    border-radius: 15px;
+    padding: 15px 10px;
+   
+    align-self: center;
+    font-size: 20px;
+}
+.profile-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+}
+.profile-right-name{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-right input{
+    width: 100%;
+    font-size: 20px;
+    background-color: #FFDC83;
+    border-radius: 15px;
+    padding: 15px 10px;
+    margin: 0 10px 0 0 ;
+}
+.profile-right input:last-child{
+    margin: 0;
+}
+/*---------*/
+.balls-container{
+    display: flex;
+    justify-content: center;
+}
+.balls{
+    background-color: #FFDC83;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    width: 200px;
+    height: 200px;
+}
+/*------------*/
+.payment-new{
+    width: 500px;
+}
+.payment-new p{
+    font-size: 18px;
+    line-height: 30px;
+}
+.card-new{
+    background-color: transparent;
+    height: auto;
+}
+.card-new input{
+    background-color: #F0F0F0;
+}
+.save-button{
+    display: flex;
+    justify-content: center;
+}
+.save-button button{
+    padding: 15px 30px;
+    background-color: #D6F84E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 20px;
+}

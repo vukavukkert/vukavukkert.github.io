@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>ThreePizza</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-all">
+            <div class="header-nav">
+                <span><a href="Index.html">Menu</a></span>
+                <span><a href="#Pizza">Пицца</a></span>
+                <span><a href="#Combo">Комбо</a></span>
+                <span><a href="#Drinks">Напитки</a></span>
+            </div>
+            <div class="header-user">
+                <span><p class="bold">+7(800)353-55-55</p></span>
+                <span class="user"><a href="Profile.html"><img src="img/Profile_Pic.png" alt=""></a></span>
+                <span class="header-user-order"><a href="Busket.html">Order</a></span>
+            </div>
+        </nav>
+    </header>
+    <div class="containers">
+        <div class="container">
+            <h2 class="container-name">Корзина</h2>
+            <div class="full-order"> 
+                <div class="order">
+                    <img src="img/Pizza_default.png" alt="pizza">
+                    <div><p>Крутая пицца</p></div>
+                    <div class="line"></div>
+                    <div><p>200Р</p></div>
+                    <div><button>X</button></div>
+                </div>
+                <div class="order">
+                    <img src="img/Pizza_default.png" alt="pizza">
+                    <div><p>Крутая пицца</p></div>
+                    <div class="line"></div>
+                    <div><p>200Р</p></div>
+                    <div><button>X</button></div>
+                </div>
+                    
+        </div>
+        <div class="final-pos">
+            <div class="final">
+                <div>Итого:</div>
+                <div class="money">400р</div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <h2 class="container-name">Укажите свой адрес</h2>
+            <div class="map">
+                <a href="https://yandex.ru/maps/65/novosibirsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:20px;position:absolute;top:0px;">Новосибирск</a>
+                <a href="https://yandex.ru/maps/65/novosibirsk/?ll=82.920430%2C55.030199&utm_medium=mapframe&utm_source=maps&z=12" style="color:#eee;font-size:20px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a>
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=82.920430%2C55.030199&z=12" width="700" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+                </iframe>
+            </div>
+            <div class="adress-container">
+                <form action="">
+                    <div>
+                        <div>
+                            <p>Адрес</p>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Улица" name="streetInput" required>
+                        <input type="text" placeholder="Дом" name="house" required>
+                        <input type="text" placeholder="Квартира" name="appartment" required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Этаж" name="floor" required>
+                        <input type="text" placeholder="Подъезд" name="entrance" required>
+                        <input type="text" placeholder="Дополнительно" name="extra" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="container-name">Оплата</h2>
+            <div class="payment">
+                <div class="payment-left">
+                    <div class="card">
+                        <div class="card-left">
+                            <input type="text" placeholder="Номер карты" name="cardnumber" required>
+                            <input type="text" placeholder="Имя держателя" name="cardname" required>
+                        </div>
+                       <div class="card-right">
+                            <input type="text" placeholder="ММ/ГГ" name="expdate" required>
+                            <input type="text" placeholder="CVV код" name="cvvcode" required>
+                       </div>
+                    </div>
+                    <div class="changecard">
+                        <button>Изменить <br> данные</button>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <div class="addcard">
+                        <button><img src="img/Subtract.png" alt="addcard"></button>
+                    </div>
+                    <div class="buybutton">
+                        <button>Купить!</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="footer"><div>Footer</div></footer>
+    <script src="js/inputs.js"></script>
+</body>
+</html>
