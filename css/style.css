@@ -309,8 +309,16 @@ body{
     border-radius: 15px;
     font-size: 20px;
 }
+.addcard{
+    display: flex;
+    flex-direction: column;
+}
 .addcard button{
     background-color: transparent;
+    margin: 0 0 15px 0;
+}
+.addcard:last-child{
+    margin: 0;
 }
 .addcard button img{
     height: 80px;
