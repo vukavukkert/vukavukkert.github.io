@@ -41,6 +41,7 @@ h1, h2, h3, h4, h4, h5, h6{font-size:inherit; font-weight: 400;}
 body{
     font-family: Montserrat, serif;
     background: linear-gradient(180deg, #F6F2ED 0%, #f1f5eb 100%);
+    
 }
 .header{
     background-color: orange;
@@ -87,6 +88,8 @@ body{
 .footer{
     background-color: orange;
     padding: 20px;
+    width: 100%;
+    bottom: 0;
 }
 .center-text{
     text-align: center;
@@ -126,6 +129,9 @@ body{
     border-radius: 25px;
     margin: 20px;
 }
+.banner-pizza button:hover{
+    background-color: rgb(232, 150, 19);
+}
 .banner-pizza p {
     padding: 10px;
     text-align: center;
@@ -158,6 +164,9 @@ body{
     border-radius: 25px;
     margin: 20px;
 }
+.banner-combos button:hover{
+    background-color: rgb(232, 150, 19);
+}
 .banner-combos p {
     padding: 10px;
     text-align: center;
@@ -185,6 +194,9 @@ body{
     background-color: orange;
     border-radius: 25px;
     margin: 20px;
+}
+.banner-drinks button:hover{
+    background-color: rgb(232, 150, 19);
 }
 .banner-drinks p {
     padding: 10px;
@@ -224,6 +236,17 @@ body{
     justify-content: space-between;
     align-items:center ;
     border-bottom: rgb(212, 212, 212) dotted;
+}
+.order button{
+    background: rgb(184, 184, 184);
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+.order button:hover{
+    background: rgb(147, 147, 147);
 }
 .order:last-child{
     border: none;
@@ -443,4 +466,37 @@ margin: 40px 0 0 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     font-size: 20px;
+}
+/*----------------*/
+#fitpage{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.registation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registation img{
+    width: 200px;
+    margin: 20px;
+}
+.registation input{
+    width: 100%;
+    font-size: 20px;
+    background-color: #FFDC83;
+    border-radius: 15px;
+    padding: 15px 10px;
+    margin: 0 0 10px 0 ;
+}
+.registation button{
+    width: 100%;
+    font-size: 20px;
+    background-color: #FFDC83;
+    border-radius: 15px;
+    padding: 15px 10px;
+    
 }
