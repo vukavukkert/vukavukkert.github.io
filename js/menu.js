@@ -1,8 +1,8 @@
 var addToCardButtons = document.getElementsByClassName("menu-button")
-var ItemsArray
+var ItemsArray = []
 for(var i = 0; i < addToCardButtons.length; i++){
     var button = addToCardButtons[i]
-    button.addEventListener('click', AddToCardClicked)
+    button.addEventListener('click', AddToCardClicked) 
 }
 function AddToCardClicked(event){
     var button = event.target
@@ -13,8 +13,8 @@ function AddToCardClicked(event){
     addItemToCard(title, price, image)
 }
 function addItemToCard(title, price, image){
-    console.log(title)
     var myAry = [title, price, image];
-    Cookies.set('name', JSON.stringify(myAry));
-    console.log(Cookies.get('name'))
+    ItemsArray.push(myAry);
+    Cookies.set('name', JSON.stringify(ItemsArray))
+    
 }
