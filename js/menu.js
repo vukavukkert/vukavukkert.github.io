@@ -1,5 +1,11 @@
 var addToCardButtons = document.getElementsByClassName("menu-button")
-var ItemsArray = []
+var ItemsArray
+if(Cookies.get('name') == undefined){
+    ItemsArray= []
+} else{
+    ItemsArray = JSON.parse(Cookies.get('name'));
+}
+
 for(var i = 0; i < addToCardButtons.length; i++){
     var button = addToCardButtons[i]
     button.addEventListener('click', AddToCardClicked) 
