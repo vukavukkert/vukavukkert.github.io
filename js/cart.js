@@ -1,16 +1,14 @@
-console.log(Cookies.get('name'))
+
 if(Cookies.get('name') != undefined){
     var c = JSON.parse(Cookies.get('name'));
-    Cookies.remove('name')
+    Cookies.remove('name');
     for(var i = 0; i < c.length; i++)
     {
-        addItemToCard(c[i][0],c[i][1],c[i][2])
-        updateCartTotal()
-    }
-    
+        addItemToCard(c[i][0],c[i][1],c[i][2]);
+        updateCartTotal();
+    } 
 }
 var removeCardButton = document.getElementsByClassName("RemoveButton")
-console.log(removeCardButton)
 for(var i = 0; i < removeCardButton.length; i++){
     var button = removeCardButton[i]
     button.addEventListener('click', function(event){
@@ -25,13 +23,15 @@ var cardItemContainer = document.getElementsByClassName("full-order")[0]
 var cartOrders = cardItemContainer.getElementsByClassName("order")
 var total = 0
 var ItemsArray = []
+if(cartOrders.length == 0){
+    Cookies.remove('name');
+}
 for(var i = 0; i < cartOrders.length; i++){
     var cartOrder = cartOrders[i];
     var priceElement = cartOrder.getElementsByClassName("cart-price")[0];
     var price = parseFloat(priceElement.innerText.replace('Р', ''));
     var title = cartOrder.getElementsByClassName("cart-title")[0].innerText;
     var img = cartOrder.getElementsByClassName("cart-img")[0].src;
-    console.log(img);
     total = total + price;
     ItemsArray.push([title, price, img]);
     Cookies.set('name', JSON.stringify(ItemsArray));
