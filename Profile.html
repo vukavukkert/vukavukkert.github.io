@@ -27,6 +27,7 @@
     <div class="containers">
         <div class="container">
             <div class="container-name"><h2>Ваш профиль</h2></div>
+            <form action="">
             <div class="profile">
                 <div class="profile-left">
                     <img src="img/ProfilePicBig.png" alt="">
@@ -37,9 +38,10 @@
                         <input type="text" placeholder="Имя" name="name" id="">
                         <input type="text" placeholder="Фамилия" name="lastName" id="">
                     </div>
-                    <input type="text" placeholder="Номер телефона" name="phoneNumber" id="">
+                    <input type="text" placeholder="Номер телефона" name="phoneNumber" id="phoneNumber">
                     <input type="text" placeholder="Адрес" name="adress" id="">
                 </div>
+            </form>
             </div>
         </div>
 
@@ -47,7 +49,7 @@
             <div>
                 <div class="container-name"><h2>БАЛЛЫ</h2></div>
                 <div class="balls-container">
-                    <div class="balls">1</div>
+                    <div class="balls" id="balls">1</div>
                 </div>
             </div>
         </div>
@@ -55,26 +57,38 @@
         <div class="container">
             <div>
                 <div class="container-name"><h2>Оплата</h2></div>
-                <div class="payment-new">
-                    <p>
-                        Наш виртуальный ресторан принимает только безналичную оплату.
-                         Пожалуйста укажите данные вашей карты ниже!
-                        </p>
-                        <div class="card card-new">
-                            <div class="card-left card-left-new">
-                                <input type="text" placeholder="Номер карты" name="cardnumber" required>
-                                <input type="text" placeholder="Имя держателя" name="cardname" required>
+                <form method="get" id="profile-card-form">
+                    <div class="payment-new">
+                        <p>
+                            Наш виртуальный ресторан принимает только безналичную оплату.
+                             Пожалуйста укажите данные вашей карты ниже!
+                            </p>
+                            <div class="card card-new">
+                                <div class="card-left card-left-new">
+                                    <input type="text" placeholder="Номер карты" name="cardnumber" id="cardnumber" required>
+                                    <input type="text" placeholder="Имя держателя" name="cardname" id="cardname" required>
+                                </div>
+                               <div class="card-right card-right-new">
+                                    <input type="text" placeholder="ММ/ГГ" name="expdate" id="expdate" required>
+                                    <input type="password" placeholder="CVV код" name="cvvcode" id="cvvcode" required>
+                               </div>
                             </div>
-                           <div class="card-right card-right-new">
-                                <input type="text" placeholder="ММ/ГГ" name="expdate" required>
-                                <input type="text" placeholder="CVV код" name="cvvcode" required>
-                           </div>
-                        </div>
-                </div>
-                <div class="save-button"><button>Сохранить</button></div>
+                    </div>
+                    <div class="save-button"><button type="submit">Сохранить</button></div>
+                </form>
             </div>
+        </div>
+        <div class="exit-button">
+            <form action="/">
+                <button >Выйти</button>
+            </form>
+            
         </div>
     </div>
     <footer class="footer"><div>Footer</div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/profile.js"></script>
 </body>
 </html>

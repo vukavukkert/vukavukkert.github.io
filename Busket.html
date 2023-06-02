@@ -74,6 +74,7 @@
             <h2 class="container-name">Оплата</h2>
             <div class="payment">
                 <div class="payment-left">
+                    <form action="">
                     <div class="card">
                         <div class="card-left">
                             <input type="text" placeholder="Номер карты" name="cardnumber" required>
@@ -84,16 +85,19 @@
                             <input type="text" placeholder="CVV код" name="cvvcode" required>
                        </div>
                     </div>
-                    <div class="changecard">
+                    <!-- <div class="changecard">
                         <button>Изменить <br> данные</button>
-                    </div>
+                    </div> -->
+                </form>
                 </div>
                 <div class="payment-right">
-                    <div class="addcard">
+                    <!-- <div class="addcard">
                         <button><img src="img/Subtract.png" alt="addcard"></button>
-                    </div>
+                    </div> -->
                     <div class="buybutton">
-                        <button>Купить!</button>
+                        <form action="thankyou.html" method="get" id="buy-button-form">
+                        <button type="submit" id="buy-button">Купить!</button>
+                        </form>
                     </div>
                 </div>
                 
@@ -102,6 +106,8 @@
     </div>
     <footer class="footer"><div>Footer</div></footer>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/payment.js"></script>
     <script src="js/cart.js"></script>
 </body>
 </html>

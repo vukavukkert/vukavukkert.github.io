@@ -325,7 +325,7 @@ body{
 .payment-right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
 }
 .changecard{
     display: flex;
@@ -505,5 +505,12 @@ margin: 40px 0 0 0;
     background-color: #FFDC83;
     border-radius: 15px;
     padding: 15px 10px;
-    
+}
+/* --------- */
+.exit-button button{
+    padding: 10px 20px ;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 25px;
+    margin: 0px;
 }
