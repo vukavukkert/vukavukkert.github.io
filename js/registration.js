@@ -15,6 +15,6 @@ reg.addEventListener('submit', (e) =>{
     errorElement.innerText = message.join(', ')
   }
   else{
-    Cookies.set('user',JSON.stringify([phoneNumber.value, password.value, balls]))
+    Cookies.set('user',JSON.stringify([phoneNumber.value, password.value, balls, 'Имя', 'Фамилия', 'Адресс']))
   }
 })

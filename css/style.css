@@ -63,6 +63,7 @@ body{
 .header-user{
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 .header-nav span{
     background-color: #F6F2ED;
@@ -73,6 +74,22 @@ body{
 .header-user span{
     margin: 0px 20px;
     padding: 10px;
+}
+.header-user-orser-wrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 20px;
+}
+.cart-items-number{
+    visibility: hidden;
+    transform: translateY(8px);
+    position: absolute;
+    color: white;
+    background-color: rgb(255, 45, 45);
+    border-radius: 15px;
+    padding: 1px 3px;
+    
 }
 .header-user-order{
     background-color: #F6F2ED;
@@ -325,7 +342,7 @@ body{
 .payment-right{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
 }
 .changecard{
     display: flex;
@@ -476,7 +493,7 @@ margin: 40px 0 0 0;
 }
 /*----------------*/
 #fitpage{
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -513,4 +530,16 @@ margin: 40px 0 0 0;
     color: white;
     border-radius: 25px;
     margin: 0px;
+}
+#message{
+    text-align: center;
+    line-height: 200%;
+}
+#message a{
+    text-align: center;
+    font-size: 16px;
+}
+.payment-info{
+font-size: 16px;
+margin: 20px;
 }

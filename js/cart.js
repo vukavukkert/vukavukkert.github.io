@@ -1,3 +1,4 @@
+hideContent()
 
 if(Cookies.get('cart') != undefined){
     var c = JSON.parse(Cookies.get('cart'));
@@ -36,6 +37,7 @@ function updateCartTotal(){
             ItemsArray.push([title, price, img]);
             Cookies.set('cart', JSON.stringify(ItemsArray));
         }
+    amountOfCartItems()
     document.getElementsByClassName('money')[0].innerText = total + 'р'
 }
 //вернуться в тот туториал и сделать ту функцию по добавленитю
@@ -62,13 +64,43 @@ buyButtonForm.addEventListener('submit', function(e){
   if(Cookies.get('cart') == undefined){
     e.preventDefault()
   }else{
-    cartItems = JSON.parse(Cookies.get('cart'))
-    if(cartItems.length == 0){
+    if(document.getElementById('adress').value == '' || Cookies.get('card') == undefined){
         e.preventDefault()
-      }else{
-        console.log(cartItems)
-        var userData = JSON.parse(Cookies.get('user'))
-        Cookies.set('user',JSON.stringify([userData[0], userData[1], userData[2]+ cartItems.length]))
-      }
+    }else{
+        cartItems = JSON.parse(Cookies.get('cart'))
+        if(cartItems.length == 0){
+            e.preventDefault()
+          }else{
+            var newadress = document.getElementById('adress').value
+            var userData = JSON.parse(Cookies.get('user'))
+            Cookies.set('user',JSON.stringify([userData[0], userData[1], userData[2]+ cartItems.length, userData[3], userData[4], newadress]))
+          }
+    }
   }  
 })
+
+function amountOfCartItems() {
+    if(Cookies.get('cart') == undefined){
+        cartCount = 0
+    }else{
+        cartCount = JSON.parse(Cookies.get('cart')).length
+    }
+    document.getElementById('cart-items').innerText = cartCount
+    if(cartCount == 0){
+        document.getElementById('cart-items').style.visibility = 'hidden'
+    }else{
+        document.getElementById('cart-items').style.visibility = 'visible'
+    }
+}
+function hideContent() {
+    if(Cookies.get('user') == undefined){
+        document.getElementById('login-to-see').style.display = 'none'
+    }
+    else{
+        document.getElementById('message').style.display = 'none'
+        fiifFields()
+    }
+}
+function fiifFields() {
+    document.getElementById('adress').value = JSON.parse(Cookies.get('user'))[5]
+}
