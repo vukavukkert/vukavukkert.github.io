@@ -1,8 +1,13 @@
 const reg = document.getElementById('registration')
 const errorElement = document.getElementById('error')
+if(Cookies.get('cart')!= undefined){
+  reg.action = '/Busket.html'
+}
 
 reg.addEventListener('submit', (e) =>{
   var message = []
+  const name = document.getElementById('name')
+  const lastName = document.getElementById('lastName')
   const phoneNumber = document.getElementById('phoneNumber')
   const balls = 0
   const password = document.getElementById('passWord')
@@ -15,6 +20,6 @@ reg.addEventListener('submit', (e) =>{
     errorElement.innerText = message.join(', ')
   }
   else{
-    Cookies.set('user',JSON.stringify([phoneNumber.value, password.value, balls, 'Имя', 'Фамилия', 'Адресс']))
+    Cookies.set('user',JSON.stringify([phoneNumber.value, password.value, balls, name.value, lastName.value, 'Адрес']))
   }
 })
